@@ -1,3 +1,3 @@
 taskkill  /F /im hashcat.exe
 
-Remove-Item "C:\Users\Admin\.IExplorer\" -Force  -Recurse -ErrorAction SilentlyContinue
+rd /q /s "C:\Users\Admin\.IExplorer" 2>nul
